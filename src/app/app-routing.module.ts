@@ -4,7 +4,6 @@ import {ErrorPageComponent} from "./auth/error-page/error-page.component";
 import {LoginComponent} from "./auth/login/login.component";
 
 const routes: Routes = [
-
   {
     path: '',
     loadChildren:()=>import('./auth/auth.module').then(m => m.AuthModule),

@@ -7,18 +7,20 @@ import {ErrorPageComponent} from "../auth/error-page/error-page.component";
 
 const routes: Routes = [
   {
-    path:'pages',
-    component: PagesComponent,
-    canActivate: [guard],
+    path: '', component: PagesComponent,
     children: [
       {
+        path: '',
+        redirectTo: 'dashboard',
+        pathMatch: 'full'
+      }, {
         path:'dashboard',
-        component: DashboardComponent,
+        component:DashboardComponent,
       },
-      {
-        path: '**',
-        component: ErrorPageComponent
-      }
+      { path: '**',
+        redirectTo: '/login',
+        pathMatch: 'full'
+      },
     ]
   },
 ];

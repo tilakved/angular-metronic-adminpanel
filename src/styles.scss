@@ -173,7 +173,7 @@ body, html {
 }
 
 .bg-color-muted {
-  color: var(--muted);
+  background-color: var(--muted);
 }
 
 .color-grey {
@@ -181,5 +181,18 @@ body, html {
 }
 
 .bg-color-grey {
-  color: var(--grey);
+  background-color: var(--grey);
+}
+.color-dark-grey {
+  color: var(--dark-grey);
+}
+
+.bg-color-dark-grey {
+  background-color: var(--dark-grey);
+}
+.font-weight-bold{
+  font-weight: bold;
+}
+.font-weight-bolder{
+  font-weight: bolder;
 }
