@@ -5,6 +5,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { SubmenuComponentComponent } from './submenu-component/submenu-component.component';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -14,10 +15,11 @@ import { SubmenuComponentComponent } from './submenu-component/submenu-component
     FooterComponent,
     SubmenuComponentComponent,
   ],
-  imports: [
-    CommonModule,
-    RouterModule
-  ],
+    imports: [
+        CommonModule,
+        RouterModule,
+        FormsModule
+    ],
   exports: [
     NavbarComponent,
     SidebarComponent,

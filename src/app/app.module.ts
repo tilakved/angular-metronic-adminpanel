@@ -6,18 +6,20 @@ import { AppComponent } from './app.component';
 import {PagesComponent} from "./pages/pages.component";
 import {SharedModule} from "./shared/shared.module";
 import {AuthModule} from "./auth/auth.module";
+import {PagesModule} from "./pages/pages.module";
 
 @NgModule({
   declarations: [
     AppComponent,
     PagesComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    SharedModule,
-    AuthModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        SharedModule,
+        AuthModule,
+        PagesModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

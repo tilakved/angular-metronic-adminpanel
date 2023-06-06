@@ -1,0 +1,14 @@
+<div class="menu-submenu menu-submenu-classic menu-submenu-left absolute">
+  <div class="menu-subnav">
+    <ng-container *ngFor="let subMenuItem of menuItem.subMenuList">
+      <div class="sub-menu-item color-dark-grey" aria-haspopup="true"
+           [ngClass]="{'sub-menu-item-active':subMenuItem == selectedSubMenu}"
+           (click)="selectSubMenu(subMenuItem)">
+        <a class="sub-menu-link">
+          <span class="sub-menu-text">{{subMenuItem}}</span>
+          <!--                <span class="menu-desc"></span>-->
+        </a>
+      </div>
+    </ng-container>
+  </div>
+</div>

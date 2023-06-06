@@ -9,15 +9,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [
-    DashboardComponent,
-  ],
-  imports: [
-    CommonModule,
-    PagesRoutingModule,
-    SharedModule,
-    FormsModule,
-    ReactiveFormsModule,
-  ]
+    declarations: [
+        DashboardComponent,
+    ],
+    exports: [
+        DashboardComponent
+    ],
+    imports: [
+        CommonModule,
+        PagesRoutingModule,
+        SharedModule,
+        FormsModule,
+        ReactiveFormsModule,
+    ]
 })
 export class PagesModule { }

@@ -28,7 +28,8 @@ export class NavbarComponent implements OnInit {
 
   selectedMenu: any = '';
   selectedSubMenu: any = '';
-  rightselection: any = '';
+  rightselection: any = 'right-panel';
+  selectedTab: any = 'alert';
 
   ngOnInit(): void {
     // this.selectedMenu = 'Dashboard';
@@ -58,6 +59,14 @@ export class NavbarComponent implements OnInit {
       this.rightselection = ''
     }else{
       this.rightselection = type
+    }
+  }
+
+  selectedNotifyTab(type: string) {
+    if(this.selectedTab == type){
+      this.selectedTab = ''
+    }else{
+      this.selectedTab = type
     }
   }
 }
