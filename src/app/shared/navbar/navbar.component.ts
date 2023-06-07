@@ -31,6 +31,7 @@ export class NavbarComponent implements OnInit {
   selectedSubMenu_2: any = '';
   selectedSubMenu_3: any = '';
   selectedRightMenu: any = '';
+  selectedNotifyCategory: any = 'alert';
 
   ngOnInit(): void {
   }
@@ -94,4 +95,10 @@ export class NavbarComponent implements OnInit {
     this.selectedSubMenu_2 = ''
     this.selectedSubMenu_3 = ''
   }
+
+  notifyToggle(item: any) {
+    this.selectedNotifyCategory = item
+  }
+
+  protected readonly close = close;
 }
