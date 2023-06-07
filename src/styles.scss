@@ -108,7 +108,10 @@ body, html {
   line-height: normal !important;
 
 }
-
+::-webkit-scrollbar{
+  width: 0;
+  background: transparent;
+}
 .icons:active {
   border-radius: 10px;
   background: none;

@@ -28,8 +28,9 @@ export class NavbarComponent implements OnInit {
 
   selectedMenu: any = '';
   selectedSubMenu_1: any = '';
-  selectedSubMenu_2:any  = '';
-  selectedSubMenu_3:any  = '';
+  selectedSubMenu_2: any = '';
+  selectedSubMenu_3: any = '';
+  selectedRightMenu: any = '';
 
   ngOnInit(): void {
   }
@@ -39,42 +40,58 @@ export class NavbarComponent implements OnInit {
       this.selectedMenu = ''
     } else {
       // setTimeout(() => {
-        this.selectedMenu = item
+      this.selectedMenu = item
       // }, 100)
     }
     this.selectedSubMenu_1 = ''
     this.selectedSubMenu_2 = ''
     this.selectedSubMenu_3 = ''
   }
+
   toggleSubMenu_1(item: any) {
     if (this.selectedSubMenu_1 == item) {
       this.selectedSubMenu_1 = ''
     } else {
       // setTimeout(() => {
-        this.selectedSubMenu_1 = item
+      this.selectedSubMenu_1 = item
       // }, 100)
     }
     this.selectedSubMenu_2 = ''
     this.selectedSubMenu_3 = ''
   }
+
   toggleSubMenu_2(item: any) {
     if (this.selectedSubMenu_2 == item) {
       this.selectedSubMenu_2 = ''
     } else {
       // setTimeout(() => {
-        this.selectedSubMenu_2 = item
+      this.selectedSubMenu_2 = item
       // }, 100)
     }
     this.selectedSubMenu_3 = ''
   }
+
   toggleSubMenu_3(item: any) {
     if (this.selectedSubMenu_3 == item) {
       this.selectedSubMenu_3 = ''
     } else {
       // setTimeout(() => {
-        this.selectedSubMenu_3 = item
+      this.selectedSubMenu_3 = item
       // }, 100)
     }
   }
 
+  toggleRightMenu(item: any) {
+    if (this.selectedRightMenu == item) {
+      this.selectedRightMenu = ''
+    } else {
+      // setTimeout(() => {
+      this.selectedRightMenu = item
+      // }, 100)
+    }
+    this.selectedMenu = ''
+    this.selectedSubMenu_1 = ''
+    this.selectedSubMenu_2 = ''
+    this.selectedSubMenu_3 = ''
+  }
 }

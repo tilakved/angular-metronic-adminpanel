@@ -1871,7 +1871,7 @@
     <!--begin::Search-->
     <div class="dropdown">
       <!--begin::Toggle-->
-      <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
+      <div class="topbar-item" (click)="toggleRightMenu('search')" data-toggle="dropdown" data-offset="10px,0px">
         <div class="btn btn-icon btn-hover-transparent-white btn-lg btn-dropdown mr-1">
 	        				<span class="svg-icon svg-icon-xl"><!--begin::Svg Icon | path:/metronic/theme/html/demo2/dist/assets/media/svg/icons/General/Search.svg--><svg
                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
@@ -1890,7 +1890,7 @@
       <!--end::Toggle-->
 
       <!--begin::Dropdown-->
-      <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg">
+      <div [ngClass]="{'d-block':selectedRightMenu == 'search'}" class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg" style="position: absolute; transform: translate3d(-292px, 79px, 0px); top: 0px; left: 0px; will-change: transform;">
         <div class="quick-search quick-search-dropdown" id="kt_quick_search_dropdown">
           <!--begin:Form-->
           <form method="get" class="quick-search-form">
@@ -1935,7 +1935,7 @@
     <!--begin::Notifications-->
     <div class="dropdown">
       <!--begin::Toggle-->
-      <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
+      <div class="topbar-item" (click)="toggleRightMenu('notify')" data-toggle="dropdown" data-offset="10px,0px">
         <div class="btn btn-icon btn-hover-transparent-white btn-dropdown btn-lg mr-1 pulse pulse-primary">
 	        				<span class="svg-icon svg-icon-xl"><!--begin::Svg Icon | path:/metronic/theme/html/demo2/dist/assets/media/svg/icons/Code/Compiling.svg--><svg
                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
@@ -1955,11 +1955,11 @@
       <!--end::Toggle-->
 
       <!--begin::Dropdown-->
-      <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg">
+      <div [ngClass]="{'d-block':selectedRightMenu == 'notify'}" class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg" style="position: absolute; transform: translate3d(-292px, 79px, 0px); top: 0px; left: 0px; will-change: transform;">
         <form>
           <!--begin::Header-->
           <div class="d-flex flex-column pt-12 bgi-size-cover bgi-no-repeat rounded-top"
-               style="background-image: url(/metronic/theme/html/demo2/dist/assets/media/misc/bg-1.jpg)">
+               style="background-image: url(/assets/images/bg-1.jpg)">
             <!--begin::Title-->
             <h4 class="d-flex flex-center rounded-top">
               <span class="text-white">User Notifications</span>
@@ -2508,7 +2508,7 @@
     <!--begin::Quick Actions-->
     <div class="dropdown">
       <!--begin::Toggle-->
-      <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
+      <div class="topbar-item" (click)="toggleRightMenu('actions')" data-toggle="dropdown" data-offset="10px,0px">
         <div class="btn btn-icon btn-hover-transparent-white btn-dropdown btn-lg mr-1">
 	        				<span class="svg-icon svg-icon-xl"><!--begin::Svg Icon | path:/metronic/theme/html/demo2/dist/assets/media/svg/icons/Media/Equalizer.svg--><svg
                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
@@ -2525,10 +2525,10 @@
       <!--end::Toggle-->
 
       <!--begin::Dropdown-->
-      <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg">
+      <div [ngClass]="{'d-block':selectedRightMenu == 'actions'}" class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg" style="position: absolute; transform: translate3d(-292px, 79px, 0px); top: 0px; left: 0px; will-change: transform;">
         <!--begin:Header-->
         <div class="d-flex flex-column flex-center py-10 bgi-size-cover bgi-no-repeat rounded-top"
-             style="background-image: url(/metronic/theme/html/demo2/dist/assets/media/misc/bg-1.jpg)">
+             style="background-image: url(/assets/images/bg-1.jpg)">
           <h4 class="text-white font-weight-bold">
             Quick Actions
           </h4>
@@ -2634,7 +2634,7 @@
     <!--begin::My Cart-->
     <div class="dropdown">
       <!--begin::Toggle-->
-      <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
+      <div class="topbar-item" (click)="toggleRightMenu('cart')" data-toggle="dropdown" data-offset="10px,0px">
         <div class="btn btn-icon btn-hover-transparent-white btn-dropdown btn-lg mr-1">
 		                    <span class="svg-icon svg-icon-xl"><!--begin::Svg Icon | path:/metronic/theme/html/demo2/dist/assets/media/svg/icons/Shopping/Cart3.svg--><svg
                           xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
@@ -2653,11 +2653,11 @@
       <!--end::Toggle-->
 
       <!--begin::Dropdown-->
-      <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-xl dropdown-menu-anim-up">
+      <div [ngClass]="{'d-block':selectedRightMenu == 'cart'}" class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-xl dropdown-menu-anim-up" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-342px, 79px, 0px);">
         <form>
           <!--begin::Header-->
           <div class="d-flex align-items-center py-10 px-8 bgi-size-cover bgi-no-repeat rounded-top"
-               style="background-image: url(/metronic/theme/html/demo2/dist/assets/media/misc/bg-1.jpg)">
+               style="background-image: url(/assets/images/bg-1.jpg)">
         <span class="btn btn-md btn-icon bg-white-o-15 mr-4">
             <i class="flaticon2-shopping-cart-1 text-success"></i>
         </span>
@@ -2667,7 +2667,7 @@
           <!--end::Header-->
 
           <!--begin::Scroll-->
-          <div class="scroll scroll-push" data-scroll="true" data-height="250" data-mobile-height="200">
+          <div class="scroll scroll-push ps ps--active-y" data-scroll="true" data-height="250" data-mobile-height="200" style="height: 250px">
             <!--begin::Item-->
             <div class="d-flex align-items-center justify-content-between p-8">
               <div class="d-flex flex-column mr-2">
@@ -2688,7 +2688,7 @@
                 </div>
               </div>
               <a class="symbol symbol-70 flex-shrink-0">
-                <img src="/metronic/theme/html/demo2/dist/assets/media/stock-600x400/img-1.jpg" title=""
+                <img src="/assets/images/img-1.jpg" title=""
                      alt=""/>
               </a>
             </div>
@@ -2718,7 +2718,7 @@
                 </div>
               </div>
               <a class="symbol symbol-70 flex-shrink-0">
-                <img src="/metronic/theme/html/demo2/dist/assets/media/stock-600x400/img-2.jpg" title=""
+                <img src="/assets/images/img-2.jpg" title=""
                      alt=""/>
               </a>
             </div>
@@ -2749,7 +2749,7 @@
                 </div>
               </div>
               <a class="symbol symbol-70 flex-shrink-0">
-                <img src="/metronic/theme/html/demo2/dist/assets/media/stock-600x400/img-3.jpg" title=""
+                <img src="/assets/images/img-3.jpg" title=""
                      alt=""/>
               </a>
             </div>
@@ -2779,7 +2779,7 @@
                 </div>
               </div>
               <a class="symbol symbol-70 flex-shrink-0">
-                <img src="/metronic/theme/html/demo2/dist/assets/media/stock-600x400/img-4.jpg" title=""
+                <img src="/assets/images/img-4.jpg" title=""
                      alt=""/>
               </a>
             </div>
@@ -2809,7 +2809,7 @@
     <!--end::My Cart-->
 
     <!--begin::Quick panel-->
-    <div class="topbar-item">
+    <div class="topbar-item" (click)="toggleRightMenu('quick_panel')">
       <div class="btn btn-icon btn-hover-transparent-white btn-lg mr-1" id="kt_quick_panel_toggle">
 		                <span class="svg-icon svg-icon-xl"><!--begin::Svg Icon | path:/metronic/theme/html/demo2/dist/assets/media/svg/icons/Layout/Layout-4-blocks.svg--><svg
                       xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
@@ -2828,7 +2828,7 @@
     <!--begin::Languages-->
     <div class="dropdown">
       <!--begin::Toggle-->
-      <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
+      <div class="topbar-item" (click)="toggleRightMenu('language')" data-toggle="dropdown" data-offset="10px,0px">
         <div class="btn btn-icon btn-hover-transparent-white btn-dropdown btn-lg mr-1">
           <img class="h-20px w-20px rounded-sm"
                src="/assets/images/Flags/226-united-states.svg" alt=""/>
@@ -2837,7 +2837,7 @@
       <!--end::Toggle-->
 
       <!--begin::Dropdown-->
-      <div class="dropdown-menu p-0 m-0 dropdown-menu-anim-up dropdown-menu-sm dropdown-menu-right">
+      <div [ngClass]="{'d-block':selectedRightMenu == 'language'}" class="dropdown-menu p-0 m-0 dropdown-menu-anim-up dropdown-menu-sm dropdown-menu-right">
         <!--begin::Nav-->
         <ul class="navi navi-hover py-4">
           <!--begin::Item-->
@@ -2855,7 +2855,7 @@
           <li class="navi-item active">
             <a class="navi-link">
             <span class="symbol symbol-20 mr-3">
-                <img src="/metronic/theme/html/demo2/dist/assets/media/svg/flags/128-spain.svg" alt=""/>
+                <img src="/assets/images/Flags/128-spain.svg" alt=""/>
             </span>
               <span class="navi-text">Spanish</span>
             </a>
@@ -2866,7 +2866,7 @@
           <li class="navi-item">
             <a class="navi-link">
             <span class="symbol symbol-20 mr-3">
-                <img src="/metronic/theme/html/demo2/dist/assets/media/svg/flags/162-germany.svg" alt=""/>
+                <img src="/assets/images/Flags/162-germany.svg" alt=""/>
             </span>
               <span class="navi-text">German</span>
             </a>
@@ -2877,7 +2877,7 @@
           <li class="navi-item">
             <a class="navi-link">
             <span class="symbol symbol-20 mr-3">
-                <img src="/metronic/theme/html/demo2/dist/assets/media/svg/flags/063-japan.svg" alt=""/>
+                <img src="/assets/images/Flags/063-japan.svg" alt=""/>
             </span>
               <span class="navi-text">Japanese</span>
             </a>
@@ -2888,7 +2888,7 @@
           <li class="navi-item">
             <a class="navi-link">
             <span class="symbol symbol-20 mr-3">
-                <img src="/metronic/theme/html/demo2/dist/assets/media/svg/flags/195-france.svg" alt=""/>
+                <img src="/assets/images/Flags/195-france.svg" alt=""/>
             </span>
               <span class="navi-text">French</span>
             </a>
@@ -2904,7 +2904,7 @@
     <!--begin::User-->
     <div class="dropdown">
       <!--begin::Toggle-->
-      <div class="topbar-item">
+      <div class="topbar-item" (click)="toggleRightMenu('profile')">
         <div class="btn btn-icon btn-hover-transparent-white d-flex align-items-center btn-lg px-md-2 w-md-auto"
              id="kt_quick_user_toggle">
           <span class="text-white opacity-70 font-weight-bold font-size-base d-none d-md-inline mr-1">Hi,</span>
