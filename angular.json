@@ -28,7 +28,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/flaticon2/flaticon.css",
+              "src/assets/kt-icons/kt.css"
             ],
             "scripts": []
           },
