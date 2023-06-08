@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {RouterModule} from '@angular/router';
+import {Component, ElementRef, HostListener, OnInit} from '@angular/core';
+import {HelperService} from "../../core/services/helper/helper.service";
 
 @Component({
   selector: 'app-navbar',
@@ -7,35 +7,22 @@ import {RouterModule} from '@angular/router';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  // menuList: any = [
-  //   {
-  //     name: 'Dashboard',
-  //     subMenuList: ['Latest Updated', 'Layout Builder']
-  //   }, {
-  //     name: 'Features',
-  //     subMenuList: ['Bootstrap', 'Custom', 'Icons', 'Cards', 'Widgets', 'Calendar', 'Charts', 'Maps', 'Miscellaneous', 'Layout Builder']
-  //   }, {
-  //     name: 'Crud',
-  //     subMenuList: ['Form & Controls', 'KTDatatable', 'Datatable.net', 'File Upload']
-  //   }, {
-  //     name: 'Apps',
-  //     subMenuList: ['Users', 'Profile', 'Contacts', 'Chat', 'Projects', 'Support Center', 'Todo', 'Education', 'eCommerce', 'Inbox']
-  //   }, {
-  //     name: 'Pages',
-  //     subMenuList: ['Pricing Tables', 'Wizards', 'Invoices', 'Login', 'Classic Login', 'Error Pages']
-  //   },
-  // ];
-
   selectedMenu: any = '';
   selectedSubMenu_1: any = '';
   selectedSubMenu_2: any = '';
   selectedSubMenu_3: any = '';
   selectedRightMenu: any = '';
   selectedNotifyCategory: any = 'alert';
-
+  selectedQuickPanelCategory: any = 'audit_logs';
+  constructor(public eRef: ElementRef, public helper:HelperService ) { }
   ngOnInit(): void {
   }
-
+  // @HostListener('document:click', ['$event'])
+  // documentClick(event:any) {
+  //   if (!this.eRef.nativeElement.contains(event.target)) {
+  //     this.selectedRightMenu = ''
+  //   }
+  // }
   toggleMenu(item: any) {
     if (this.selectedMenu == item) {
       this.selectedMenu = ''
@@ -99,6 +86,12 @@ export class NavbarComponent implements OnInit {
   notifyToggle(item: any) {
     this.selectedNotifyCategory = item
   }
+  quickPanelToggle(item: any) {
+    this.selectedQuickPanelCategory = item
+  }
 
-  protected readonly close = close;
+  languageChange(lang:any) {
+    this.helper.common.language = lang
+    this.toggleRightMenu(this.selectedRightMenu)
+  }
 }
